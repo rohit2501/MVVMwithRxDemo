@@ -47,6 +47,12 @@ public class CountrySelectionActivity extends AppCompatActivity {
         subscribeCountryViewModel();
     }
 
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        compositeDisposable.dispose();
+    }
+
     private void subscribeCountryViewModel() {
         countryViewModelContract
                 .getCountries("asia")
@@ -77,9 +83,4 @@ public class CountrySelectionActivity extends AppCompatActivity {
                         });
     }
 
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-        compositeDisposable.dispose();
-    }
 }
