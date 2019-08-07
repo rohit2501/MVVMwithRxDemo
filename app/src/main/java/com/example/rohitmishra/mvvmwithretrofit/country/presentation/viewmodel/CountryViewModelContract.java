@@ -7,7 +7,7 @@ public interface CountryViewModelContract {
 
   /**
    * @param regionName
-   * @return
+   * @return A @{@link List} of countries.
    */
   Single<List<CountryItem>> getCountries(String regionName);
 }
