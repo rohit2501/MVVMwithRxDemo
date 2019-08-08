@@ -29,6 +29,6 @@ steps:
       apksignerKeystorePassword: '$(!rohit.2501)'
       apksignerKeystoreAlias: 'upload'
       apksignerKeyPassword: '$(!rohit.2501)'
-      zipalign: true
-      
+      zipalign: false
+
 
