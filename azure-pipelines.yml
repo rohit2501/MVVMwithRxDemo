@@ -24,11 +24,11 @@ steps:
 - task: AndroidSigning@3
   inputs:
         apkFiles: '**/*.apk'
-        apksign: true # Optional
-        apksignerKeystoreFile: 'key_store.jks'# Required when apksign == True
-        #apksignerKeystorePassword: # Optional
-        #apksignerKeystoreAlias: # Optional
-        #apksignerKeyPassword: # Optional
+        apksign: true
+        apksignerKeystoreFile: 'key_store'# Required when apksign == True
+        apksignerKeystorePassword: '$(!rohit.2501)'
+        apksignerKeystoreAlias: 'upload'
+        apksignerKeyPassword: '$(!rohit.2501)'
         #apksignerArguments: '--verbose' # Optional
         #apksignerFile: # Optional
         #zipalign: true # Optional
