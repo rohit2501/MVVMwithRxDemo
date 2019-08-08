@@ -23,9 +23,9 @@ steps:
 # Sign and align Android APK files
 - task: AndroidSigning@3
   inputs:
-        #apkFiles: '**/*.apk'
-        #apksign: true # Optional
-        #apksignerKeystoreFile: # Required when apksign == True
+        apkFiles: '**/*.apk'
+        apksign: true # Optional
+        apksignerKeystoreFile: '**/*.jks'# Required when apksign == True
         #apksignerKeystorePassword: # Optional
         #apksignerKeystoreAlias: # Optional
         #apksignerKeyPassword: # Optional
@@ -34,21 +34,3 @@ steps:
         #zipalign: true # Optional
         #zipalignFile: # Optional
 
-  # App Center distribute
-  # Distribute app builds to testers and users via Visual Studio App Center
-- task: AppCenterDistribute@1
-  inputs:
-    serverEndpoint:
-    appSlug:
-    appFile:
-    #symbolsOption: 'Apple' # Optional. Options: apple
-    #symbolsPath: # Optional
-    #symbolsPdbFiles: '**/*.pdb' # Optional
-    #symbolsDsymFiles: # Optional
-    #symbolsMappingTxtFile: # Optional
-    #symbolsIncludeParentDirectory: # Optional
-    #releaseNotesOption: 'input' # Options: input, file
-    #releaseNotesInput: # Required when releaseNotesOption == Input
-    #releaseNotesFile: # Required when releaseNotesOption == File
-    #isMandatory: false # Optional
-    #distributionGroupId: # Optional
