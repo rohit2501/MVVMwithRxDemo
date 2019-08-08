@@ -19,14 +19,10 @@ steps:
       testResultsFiles: '**/TEST-*.xml'
       tasks: 'assembleDebug'
 
-  # Android signing
-  # Sign and align Android APK files
-  - task: AndroidSigning@3
+  - task: CopyFiles@2
     inputs:
-      apkFiles: '**/*.apk'
-      apksign: true
-      apksignerKeystoreFile: 'key_store.jks'# Required when apksign == True
-      
+      contents: '**/*.apk'
+      targetFolder: '$(build.artifactStagingDirectory)'
 
 
 
