@@ -25,7 +25,7 @@ steps:
   inputs:
         apkFiles: '**/*.apk'
         apksign: true # Optional
-        apksignerKeystoreFile: '**/*.jks'# Required when apksign == True
+        apksignerKeystoreFile: 'key_store.jks'# Required when apksign == True
         #apksignerKeystorePassword: # Optional
         #apksignerKeystoreAlias: # Optional
         #apksignerKeyPassword: # Optional
