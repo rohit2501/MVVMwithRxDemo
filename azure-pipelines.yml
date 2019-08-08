@@ -25,7 +25,7 @@ steps:
     inputs:
       apkFiles: '**/*.apk'
       apksign: true
-      apksignerKeystoreFile: 'key_store'# Required when apksign == True
+      apksignerKeystoreFile: 'key_store.jks'# Required when apksign == True
       # apksignerKeystorePassword: '$(!rohit.2501)'
       #apksignerKeystoreAlias: 'upload'
       #apksignerKeyPassword: '$(!rohit.2501)'
