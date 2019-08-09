@@ -31,5 +31,9 @@ steps:
       artifactName: 'drop'
       artifactType: 'container'
 
+  - task: AppCenterTest@1
+    inputs:
+      appFile:
+
 
 
