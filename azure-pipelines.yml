@@ -10,6 +10,9 @@ pool:
   vmImage: 'macos-latest'
 
 steps:
+  - script: sudo npm install -g appcenter-cli
+  - script: appcenter login --token {524b8784deb9810b478c9549094ed4d410f7ef5f}
+
   - task: Gradle@2
     inputs:
       workingDirectory: ''
@@ -33,7 +36,7 @@ steps:
 
   - task: AppCenterDistribute@1
     inputs:
-      serverEndpoint:
+      serverEndpoint: 'AppCenter'
       appSlug:
       appFile:
 
