@@ -34,10 +34,5 @@ steps:
       artifactName: 'drop'
       artifactType: 'container'
 
-  - task: AppCenterDistribute@1
-    inputs:
-      serverEndpoint: 'AppCenter'
-      appSlug:
-      appFile:
 
 
